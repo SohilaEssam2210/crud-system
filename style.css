@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+BE+WAL:wght@100..400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-light: #F8F8F8;
+  --color-dark: #222;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.crud-container {
+  width: 70%;
+  margin: 10px auto;
+}
+
+.head {
+  font-size: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding: 10px;
+  /* border: 2px solid rgb(88, 7, 164); */
+  border-radius: 15px;
+  box-shadow: 1px 2px 6px rgba(177, 125, 222, 0.657)
+}
+
+
+.head .toggle-btn i {
+  font-size: 30px;
+  color: rgb(221, 221, 46);
+  cursor: pointer;
+}
+
+.title p {
+  letter-spacing: 2.5px;
+}
+
+input {
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: var(--color-light);
+  background-color: #111111de;
+  transition: 0.4s ease-in-out;
+}
+
+input:focus {
+  background-color: #000;
+  border: 2px solid rgba(88, 7, 164, 0.293);
+  transform: scale(1.1);
+}
+
+.inputs .price input {
+  width: 20%;
+  margin-right: 10px;
+}
+
+.inputs .price #total {
+  background-color: #ac2929b3;
+  padding: 5px 15px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.inputs .price #total::before {
+  content: "Total : ";
+  text-align: center;
+  font-size: 18px;
+}
+
+button {
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 40px;
+  border-radius: 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  background-color: #551aa8f0;
+  color: #fff;
+  font-size: 17px;
+  transition: 0.3S ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(57, 15, 116);
+  letter-spacing: 1.1px;
+}
+
+.btn-search {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 25px;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table th {
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 15px 10px;
+}
+
+table tr:nth-child(even) {
+  background-color: #41404048;
+}
+
+table td button {
+  font-size: 15px;
+  margin-right: 5px;
+  width: 85%;
+}
+
+table td button#update {
+  background-color: #369572cf;
+}
+
+#deleteAll button {
+  background: #982525da;
+}
+
+table td button#delete {
+  background-color: #982525da;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.invalid {
+  border: 1px solid red;
+  box-shadow: 1px 1px 5px red;
+}
+
+@media (max-width: 768px) {
+  .inputs .price input {
+    width: 100%;
+  }
+
+  .inputs .price #total {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    width: fit-content;
+  }
+
+  .title p {
+    letter-spacing: 1px;
+  }
+
+  .head .toggle-btn i {
+    position: absolute;
+    top: 18px;
+    right: 83px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .crud-container {
+    width: 80%;
+  }
+
+  .table-content {
+    min-width: 100%;
+    overflow-x: auto;
+  }
+}

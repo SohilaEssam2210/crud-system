@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>CRUDS</title>
+</head>
+
+<body>
+  <div class="crud-container">
+    <div class="head">
+      <div class="title">
+        <h1>CRUDS</h1>
+        <p> Product management system </p>
+      </div>
+      <div class="toggle-btn">
+        <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+      </div>
+    </div>
+
+    <div class="inputs">
+      <input type="text" placeholder="Title" id="title">
+      <div class="price">
+        <input onkeyup="getTotal()" type="number" placeholder="Price" id="price">
+        <input onkeyup="getTotal()" type="number" placeholder="Taxes" id="taxes">
+        <input onkeyup="getTotal()" type="number" placeholder="Ads" id="ads">
+        <input onkeyup="getTotal()" type="number" placeholder="Discount" id="discount">
+        <span id="total"></span>
+      </div>
+      <input type="number" placeholder="Count" id="count">
+      <input type="text" placeholder="Category" id="category">
+      <button id="create">Create</button>
+    </div>
+
+    <div class="outputs">
+      <div class="search-container">
+        <input type="text" onkeyup="searchData(this.value)" placeholder="Search" id="search">
+        <div class="btn-search">
+          <button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title</button>
+          <button onclick="getSearchMood(this.id)" id="searchCategory">Search By Category</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="deleteAll"></div>
+
+    <div class="table-content">
+      <table>
+        <thead>
+          <tr style="border-bottom: 2px solid #9e9898;">
+            <th>ID</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Taxes</th>
+            <th>Ads</th>
+            <th>Discount</th>
+            <th>Total</th>
+            <th>Category</th>
+            <th>update</th>
+            <th>delete</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+<script src="main.js"></script>
+
+</html>
