@@ -17,6 +17,7 @@ toggle.addEventListener("click", function () {
     body.style.transition = "2s";
     inputs.forEach((input) => {
       input.style.backgroundColor = "#e7e2e95e";
+      input.style.color = "#000";
     });
   }
 });

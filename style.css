@@ -178,6 +178,15 @@ table td button#delete {
     top: 18px;
     right: 83px;
   }
+  .btn-search {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .btn-search button {
+    margin: 5px 0;
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 1200px) {

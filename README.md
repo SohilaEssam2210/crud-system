@@ -1,6 +1,6 @@
 # crud-system
 
-crud system application used html css js
+crud system application used html css js Bure
 
 # Key-Features:
 
@@ -13,4 +13,5 @@ crud system application used html css js
 
 Here’s a screenshot of the project:
 
-![Screenshot of the project](./Screenshot.jpeg)
+![Screenshot of the project Dark MooD](./Screenshot.jpeg)
+![Screenshot of the project Light MooD](./Screenshot_light.jpeg)
